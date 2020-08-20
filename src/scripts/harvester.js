@@ -1,15 +1,15 @@
 export const harvestPlants = (plantArray) => {
     const seedObjects = [];
     for (const plant of plantArray) {
-        if (plant.type === "Asparagus" || plant.type === "Potato" || plant.type === "Soybean" || plant.type === "Sunflower" || plant.type === "Wheat") {
+        if (plant.type !== "Corn") {
             const num = plant.output;
             for (let i=1; i<=num; i++) {
                 seedObjects.push(plant);
             }
         } else {
-            const num = 6;
+            const num = plant.output/2;
             for (let i=1; i<=num; i++) {
-                seedObjects.push(plant[0]);
+                seedObjects.push(plant);
             }
         }
     }
