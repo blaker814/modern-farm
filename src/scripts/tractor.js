@@ -14,7 +14,8 @@ export const plantSeeds = (plantingPlan) => {
                 addPlant(seed);
             } else if (array[i] === "Corn") {
                 const seed = createCorn();
-                addPlant(seed);
+                addPlant(seed[0]);
+                addPlant(seed[1]);
             } else if (array[i] === "Potato") {
                 const seed = createPotato();
                 addPlant(seed);

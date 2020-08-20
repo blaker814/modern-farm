@@ -34,3 +34,11 @@ h1,h2,h3,h4,h5,h6 {
     background-color: darksalmon;
 }
 
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    margin: 10px;
+}
