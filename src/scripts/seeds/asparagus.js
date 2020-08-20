@@ -5,5 +5,3 @@ export const createAsparagus = () => {
         output: 4
     }
 }
-
-console.log(createAsparagus());
