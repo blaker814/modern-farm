@@ -9,7 +9,6 @@ export const Catalog = (foodArray) => {
         occurrences[foodArray[i].type] = (occurrences[foodArray[i].type] || 0) + 1;
      }
      
-     console.log(occurrences); 
     for (const [food, num] of Object.entries(occurrences)) {
         foodHTMLRep.innerHTML += `<section class="plant">
         <h3>${food}</h3> 
