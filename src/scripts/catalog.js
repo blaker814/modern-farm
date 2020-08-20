@@ -3,11 +3,11 @@ export const Catalog = (foodArray) => {
     foodArray.sort(function(a, b) {
         return a.type.localeCompare(b.type)
      })
-
-     const occurrences = {};
-     for (let i = 0; i<foodArray.length; i++) {
+     console.log(foodArray)
+    const occurrences = {};
+    for (let i = 0; i<foodArray.length; i++) {
         occurrences[foodArray[i].type] = (occurrences[foodArray[i].type] || 0) + 1;
-     }
+    }
      
     for (const [food, num] of Object.entries(occurrences)) {
         foodHTMLRep.innerHTML += `<section class="plant">
