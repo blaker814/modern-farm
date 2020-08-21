@@ -11,22 +11,29 @@ export const plantSeeds = (plantingPlan) => {
         for (let i=0; i<array.length; i++) {
             if (array[i] === "Asparagus") {
                 const seed = createAsparagus();
+                seed.icon = "images/asparagus-icon.png";
                 addPlant(seed);
             } else if (array[i] === "Corn") {
                 const seed = createCorn();
+                seed[0].icon = "images/corn-icon.png";
+                seed[1].icon = "images/corn-icon.png";
                 addPlant(seed[0]);
                 addPlant(seed[1]);
             } else if (array[i] === "Potato") {
                 const seed = createPotato();
+                seed.icon = "images/potato-icon.png";
                 addPlant(seed);
             } else if (array[i] === "Soybean") {
                 const seed = createSoybean();
+                seed.icon = "images/soybean-icon.png";
                 addPlant(seed);
             } else if (array[i] === "Sunflower") {
                 const seed = createSunflower();
+                seed.icon = "images/sunflower-icon.png";
                 addPlant(seed);
             } else if (array[i] === "Wheat") {
                 const seed = createWheat();
+                seed.icon = "images/wheat-icon.png";
                 addPlant(seed);
             }
         }

@@ -2,27 +2,33 @@ export const harvestPlants = (plantArray) => {
     const seedObjects = [];
     let num = 0;
     let count = 0;
-    for (let i=0; i<plantArray.length; i++) {
+    for (const plant of plantArray) {
         count = count+num;
-        if (plantArray[i].type !== "Corn") {
-            num = plantArray[i].output;
+        if (plant.type !== "Corn") {
+            num = plant.output;
             for (let j=1; j<=num; j++) {
-                const obj = {};
-                obj.type = plantArray[i].type;
-                obj.height = plantArray[i].height;
-                obj.output = plantArray[i].output
-                obj.id = count + j;
+                let obj = {};
+                obj = {
+                    type: plant.type,
+                    height: plant.height,
+                    output: plant.output,
+                    icon: plant.icon,
+                    id: count + j
+                }
                 seedObjects.push(obj);
                 
             }
         } else {
-            num = plantArray[i].output/2;
+            num = plant.output/2;
             for (let j=1; j<=num; j++) {
-                const obj = {};
-                obj.type = plantArray[i].type;
-                obj.height = plantArray[i].height;
-                obj.output = plantArray[i].output
-                obj.id = count + j;
+                let obj = {};
+                obj = {
+                    type: plant.type,
+                    height: plant.height,
+                    output: plant.output,
+                    icon: plant.icon,
+                    id: count + j
+                }
                 seedObjects.push(obj);
             }
         }
