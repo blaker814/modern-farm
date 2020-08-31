@@ -5,21 +5,22 @@ export const Catalog = (foodArray) => {
      })
      console.log(foodArray)
     const occurrences = {};
-    for (let i = 0; i<foodArray.length; i++) {
-        occurrences[foodArray[i].type] = (occurrences[foodArray[i].type] || 0) + 1;
-    }
+    foodArray.map(food => {
+        occurrences[food.type] = (occurrences[food.type] || 0) + 1;
+    })
     
-    for (const [food, num] of Object.entries(occurrences)) {
-        foodHTMLRep.innerHTML += `<section class="plant">
-        <h3>${food}</h3> 
+    Object.entries(occurrences).map(([food,num]) => {
+        foodHTMLRep.innerHTML += 
+        `<section class="plant">
+            <h3>${food}</h3> 
             <p>${num}</p>
         </section>`
-    }
+    })
 
-    for (const food of foodArray) {
-        foodHTMLRep.innerHTML += `<section class="plant-icon">
-        <img src=${food.icon} alt=${food.type}>
-        </section>
-        `
-    }
+    foodArray.map(food => {
+        foodHTMLRep.innerHTML += 
+        `<section class="plant-icon">
+            <img src=${food.icon} alt=${food.type}>
+        </section>`
+    })
 }
